@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mihraban Xoshmauey - A Romantic Welcome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        .heart-beat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .bg-romantic {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .animate-float {
+            animation: float 3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-romantic min-h-screen font-sans overflow-x-hidden">
+    <!-- Floating Hearts Background -->
+    <div class="fixed inset-0 overflow-hidden z-0">
+        <div class="absolute top-10 left-1/4 text-red-400 text-4xl opacity-30 floating" style="animation-delay: 0s;">❤</div>
+        <div class="absolute top-1/3 left-3/4 text-pink-400 text-5xl opacity-40 floating" style="animation-delay: 1s;">❤</div>
+        <div class="absolute top-2/3 left-1/5 text-red-500 text-6xl opacity-50 floating" style="animation-delay: 2s;">❤</div>
+        <div class="absolute top-3/4 left-2/3 text-pink-500 text-3xl opacity-60 floating" style="animation-delay: 3s;">❤</div>
+        <div class="absolute top-1/5 left-1/2 text-red-300 text-7xl opacity-30 floating" style="animation-delay: 4s;">❤</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="relative z-10 container mx-auto px-4 py-12 flex flex-col items-center justify-center min-h-screen">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-bold text-white text-shadow mb-6 heart-beat">Mihraban Xoshmauey</h1>
+            <p class="text-xl md:text-2xl text-white text-shadow italic">A Kind Welcome Filled With Love</p>
+        </header>
+
+        <!-- Romantic Card -->
+        <div class="bg-white bg-opacity-80 rounded-2xl shadow-xl p-8 max-w-2xl w-full transform transition-all hover:scale-105 duration-300 mb-12">
+            <div class="flex flex-col items-center text-center">
+                <div class="text-red-500 text-6xl mb-6 heart-beat">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-pink-600 mb-4">Welcome to My Heart</h2>
+                <p class="text-gray-700 text-lg mb-6">
+                    Like the gentle whisper of the wind and the soft touch of petals, your presence brings warmth to my soul. 
+                    Mihraban Xoshmauey - a welcome as sweet as the first bloom of spring.
+                </p>
+                <div class="flex space-x-4">
+                    <span class="text-red-400 text-3xl"><i class="fas fa-heart"></i></span>
+                    <span class="text-pink-400 text-3xl"><i class="fas fa-heart"></i></span>
+                    <span class="text-red-400 text-3xl"><i class="fas fa-heart"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Love Quotes -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 w-full max-w-4xl">
+            <div class="bg-white bg-opacity-80 rounded-xl p-6 shadow-lg transform transition hover:scale-105">
+                <div class="text-red-400 text-4xl mb-4">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="text-gray-700 italic mb-4">"Love is composed of a single soul inhabiting two bodies."</p>
+                <p class="text-pink-500 font-medium">- Aristotle</p>
+            </div>
+            <div class="bg-white bg-opacity-80 rounded-xl p-6 shadow-lg transform transition hover:scale-105">
+                <div class="text-red-400 text-4xl mb-4">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="text-gray-700 italic mb-4">"The best thing to hold onto in life is each other."</p>
+                <p class="text-pink-500 font-medium">- Audrey Hepburn</p>
+            </div>
+            <div class="bg-white bg-opacity-80 rounded-xl p-6 shadow-lg transform transition hover:scale-105">
+                <div class="text-red-400 text-4xl mb-4">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="text-gray-700 italic mb-4">"Life is the flower for which love is the honey."</p>
+                <p class="text-pink-500 font-medium">- Victor Hugo</p>
+            </div>
+        </div>
+
+        <!-- Interactive Heart -->
+        <div class="mb-12 text-center">
+            <h3 class="text-2xl text-white text-shadow mb-6">Click the heart to send love</h3>
+            <button id="heartButton" class="text-red-500 text-6xl focus:outline-none transform transition hover:scale-110 active:scale-95">
+                <i class="fas fa-heart"></i>
+            </button>
+            <p id="clickCount" class="text-white text-shadow mt-4">0 hearts sent</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-white text-shadow">
+            <p class="mb-2">Created with <i class="fas fa-heart text-red-400"></i> for someone special</p>
+            <p>Mihraban Xoshmauey - A Kind Welcome</p>
+        </footer>
+    </div>
+
+    <script>
+        // Interactive heart click counter
+        const heartButton = document.getElementById('heartButton');
+        const clickCount = document.getElementById('clickCount');
+        let count = 0;
+
+        heartButton.addEventListener('click', () => {
+            count++;
+            clickCount.textContent = `${count} heart${count !== 1 ? 's' : ''} sent`;
+            
+            // Create floating heart animation
+            const heart = document.createElement('div');
+            heart.innerHTML = '<i class="fas fa-heart text-red-500"></i>';
+            heart.className = 'absolute text-3xl animate-float';
+            heart.style.left = `${Math.random() * 100}%`;
+            heart.style.top = `${Math.random() * 100}%`;
+            heart.style.animation = 'float 3s ease-out forwards';
+            
+            document.body.appendChild(heart);
+            
+            // Remove heart after animation
+            setTimeout(() => {
+                heart.remove();
+            }, 3000);
+        });
+
+        // Add more floating hearts on mouse move
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.97) { // Only create hearts occasionally
+                const heart = document.createElement('div');
+                heart.innerHTML = '<i class="fas fa-heart"></i>';
+                heart.className = 'absolute text-xl text-pink-300 opacity-70';
+                heart.style.left = `${e.clientX}px`;
+                heart.style.top = `${e.clientY}px`;
+                heart.style.transform = 'translate(-50%, -50%)';
+                heart.style.transition = 'all 2s ease-out';
+                
+                document.body.appendChild(heart);
+                
+                // Animate heart
+                setTimeout(() => {
+                    heart.style.opacity = '0';
+                    heart.style.transform = `translate(${Math.random() * 100 - 50}px, -100px)`;
+                }, 10);
+                
+                // Remove heart after animation
+                setTimeout(() => {
+                    heart.remove();
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
